@@ -1,0 +1,45 @@
+# -------------------------
+# Python cache and compiled files
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# -------------------------
+# Environment and virtual environments
+# -------------------------
+.env
+myenv/
+venv/
+env/
+
+# -------------------------
+# VS Code
+# -------------------------
+.vscode/
+
+# -------------------------
+# Node.js (if frontend added later)
+# -------------------------
+node_modules/
+
+# -------------------------
+# Alembic migrations cache
+# -------------------------
+backend/alembic/versions/
+
+# -------------------------
+# Build and cache files
+# -------------------------
+dist/
+build/
+*.egg-info/
+
+# -------------------------
+# OS & editor generated files
+# -------------------------
+.DS_Store
+Thumbs.db
+.idea/
