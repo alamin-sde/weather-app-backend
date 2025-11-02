@@ -7,13 +7,16 @@ from typing import Annotated
 from sqlalchemy.orm import Session
 from core.database import getDB
 from sqlalchemy.ext.asyncio import AsyncSession
-from api.routes_user import router as user_router
+from api.user_router import router as user_router
+from api.weather_router import router as weather_router
 app=FastAPI()
 
 # metadata stores all information about  models,
 # create_all() tells SQLAlchemy: create all tables in the database that are defined in Base.metadata.
 # bind=engine -> specifies which database to use (PostgreSQL).
 app.include_router(user_router)
+app.include_router(weather_router)
+
 async def startup():
     
     async with engine.begin() as conn:

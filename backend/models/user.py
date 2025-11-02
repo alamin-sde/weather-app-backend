@@ -21,4 +21,5 @@ class User(Base):
         default=lambda: datetime.now(timezone.utc),
         onupdate=lambda: datetime.now(timezone.utc),
     )
-    savedCites:Mapped["City"]=relationship(back_populates="city")
+    savedCites=relationship("City",back_populates="user")
+    query_logs=relationship("QueryLog",back_populates='user')
