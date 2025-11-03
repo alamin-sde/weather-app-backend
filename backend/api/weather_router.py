@@ -13,8 +13,8 @@ async def getSummary(city:str):
     
 
 @router.get('/city/by_date')
-async def get_weather_by_date(city:str,target_date:datetime):
-    return await weather_service.get_weather_by_date(city,target_date)
+async def get_weather_by_date(city:str,target_date:datetime,is_needed_llm_summary: bool):
+    return await weather_service.get_weather_by_date(city,target_date,is_needed_llm_summary)
     
     
     
